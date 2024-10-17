@@ -34,4 +34,5 @@ def githubuserpfp():
 # asks user if it would like to get a github pfp before running function to perform it
 if input.lower("Would you like to get a github users profile picture?") == "yes":
     githubuserpfp()
-else print("okay")
+else:
+    print("okay")
