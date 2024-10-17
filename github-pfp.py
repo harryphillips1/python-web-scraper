@@ -1,5 +1,5 @@
 import requests
-import bs4 import BeautifulSoup as bs
+from bs4 import BeautifulSoup as bs
 
 def githubuserpfp():
     url = "https://github.com/" + input("What is the username you would like to search for?")
