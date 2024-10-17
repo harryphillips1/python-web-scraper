@@ -23,7 +23,7 @@ def githubuserpfp():
             if location.endswith("/") is False or len(location) > 0:
                 location = location + "/"
 # stores file
-            r = requests.get(pfp)  
+            r = requests.get(pfp)
             with open(location+name+".png", 'wb') as f:
                 f.write(r.content)
 #
