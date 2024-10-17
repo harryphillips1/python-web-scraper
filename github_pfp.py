@@ -18,7 +18,7 @@ def githubuserpfp():
         if answer == 2:
 #
             name = input("What would you like to call the file?")
-            location = input("Specify a file path (optional, will save to the local directory if left blank)")
+            location = input("Specify a file path (optional, saves to local directory if blank)")
 # adds slash to the end of the path if not included exculding empty paths
             if location.endswith("/") is False or len(location) > 0:
                 location = location + "/"
@@ -29,8 +29,7 @@ def githubuserpfp():
 #
             break
 # trys again if valid option isnt selected
-        else:
-            print("I'm not sure what that means, please try again")
+        print("I'm not sure what that means, please try again")
 # asks user if it would like to get a github pfp before running function to perform it
 if input.lower("Would you like to get a github users profile picture?") == "yes":
     githubuserpfp()
