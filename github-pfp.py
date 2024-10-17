@@ -20,7 +20,7 @@ def githubuserpfp():
             name = input("What would you like to call the file?")
             location = input("Specify a file path (optional, will save to the local directory if left blank)")
             
-            if location.endswith("/") == False or len(location) > 0:
+            if location.endswith("/") is False or len(location) > 0:
                 location = location + "/"
 
             r = requests.get(pfp)  
