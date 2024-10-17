@@ -25,7 +25,7 @@ def githubuserpfp():
 
             r = requests.get(pfp)  
             with open(location+name+".png", 'wb') as f:
-            f.write(r.content)
+                f.write(r.content)
 
             break
 
