@@ -8,12 +8,12 @@ def githubuserpfp():
     soup = bs(r.content, 'html.parser')
     pfp = soup.find('img', {'alt' : "Avatar"})['src']
     
-    finished = False
-    while finished = False:
+    finished = "False"
+    while finished = "False":
         answer = input("Would you like to 1) Print the link or 2) Save it to your photos folder?")
         if answer == 1:
             print(pfp)
-            finished = True
+            finished = "True"
 
         elif answer == 2:
             
@@ -27,7 +27,7 @@ def githubuserpfp():
             with open(location+name+".png", 'wb') as f:
             f.write(r.content)
 
-            finished = True
+            finished = "True"
 
         else:
             print("I'm not sure what that means, please try again")
