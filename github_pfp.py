@@ -6,16 +6,16 @@ def githubuserpfp():
     r = requests.get(url)
 # gets github page data
     soup = bs(r.content, 'html.parser')
-    pfp = soup.find('img', {'alt' : "Avatar"})["src"]
+    pfp = soup.find('img', {'width' : "260"})["src"]
 # searches for pfp and stores it to pfp
     while True:
         answer = input("Would you like to 1) Print the link or 2) Save it to your photos folder?")
-        if answer == 1:
+        if answer == "1":
             print(pfp)
 #
             break
 #
-        if answer == 2:
+        if answer == "2":
 #
             name = input("What would you like to call the file?")
             location = input("Specify a file path (optional, saves to local directory if blank)")
