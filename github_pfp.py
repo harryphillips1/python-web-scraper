@@ -6,7 +6,7 @@ def githubuserpfp():
     r = requests.get(url)
 # gets github page data
     soup = bs(r.content, 'html.parser')
-    pfp = soup.find('img', {'alt' : "Avatar"})['src']
+    pfp = soup.find('img', {'alt' : "Avatar"})["src"]
 # searches for pfp and stores it to pfp
     while True:
         answer = input("Would you like to 1) Print the link or 2) Save it to your photos folder?")
@@ -31,7 +31,7 @@ def githubuserpfp():
 # trys again if valid option isnt selected
         print("I'm not sure what that means, please try again")
 # asks user if it would like to get a github pfp before running function to perform it
-if input.lower("Would you like to get a github users profile picture?") == "yes":
+if input("Would you like to get a github users profile picture?") == "yes":
     githubuserpfp()
 else:
     print("okay")
